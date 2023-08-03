@@ -15,6 +15,6 @@ app.connectMicroservice({
   },
 });
 app.useLogger(app.get(Logger));
-  await app.startAllMicroservices();
+await app.startAllMicroservices();
 }
 bootstrap();

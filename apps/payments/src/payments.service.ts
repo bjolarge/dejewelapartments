@@ -24,6 +24,7 @@ async createCharge({card, amount}:CreateChargeDto){
     confirm:true,
     payment_method_types: ['card'],
     currency:'usd',
+   
   });
 
   return paymentIntent;

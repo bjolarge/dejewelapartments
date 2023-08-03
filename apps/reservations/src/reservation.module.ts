@@ -17,7 +17,7 @@ import { AUTH_SERVICE, PAYMENTS_SERVICE } from '@app/common/constants/services';
         {name:ReservationDocument.name, schema: ReservationSchema},
     ]),
     LoggerModule,
-    //add individual config module to benefit from the adv of microservice
+    //add individual config module to benefit from the advent of microservice
     ConfigModule.forRoot({
       isGlobal:true,
       validationSchema: Joi.object({

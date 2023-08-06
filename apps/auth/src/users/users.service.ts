@@ -22,6 +22,7 @@ export class UsersService {
         }
         throw new UnprocessableEntityException('Email already exists.');
     }
+  
 
     async verifyUser(email:string, password:string){
         const user = await this.userRepository.findOne({email});

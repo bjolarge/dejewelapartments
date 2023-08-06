@@ -1,8 +1,9 @@
 import { NestFactory } from '@nestjs/core';
 import { AuthModule } from './auth.module';
-import { Logger, ValidationPipe } from '@nestjs/common';
+import { ValidationPipe } from '@nestjs/common';
 import * as cookieParser from 'cookie-parser';
 import { ConfigService } from '@nestjs/config';
+import { Logger } from 'nestjs-pino';
 import {Transport} from '@nestjs/microservices';
 
 async function bootstrap() {

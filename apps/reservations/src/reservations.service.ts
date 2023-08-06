@@ -13,10 +13,11 @@ export class ReservationsService {
  )
     {}
      async create(createReservationDto:CreateReservationDto, userId:string){
-     this.paymentsService.send('create_charge', createReservationDto.charge,
-     ).pipe(map(async()=>{        
-        const reservation =  await this.reservationRepository.create({
+     return this.paymentsService.send('create_charge', createReservationDto.charge)
+        .pipe(map((res)=>{ 
+        return this.reservationRepository.create({
             ...createReservationDto,
+            invoiceId:res.id,
             timestamp:new Date(),
             userId,
          });  

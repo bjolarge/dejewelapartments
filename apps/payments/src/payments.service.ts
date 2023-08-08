@@ -33,7 +33,7 @@ async createCharge({ card,amount,email}:PaymentsCreateChargeDto){
    
   });
 
-  this.notificationsService.emit('notify_email',{email});
+  this.notificationsService.emit('notify_email',{email, text:`Your payment of $ ${amount}has completed successfully.`,});
 
   return paymentIntent;
 }
